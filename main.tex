@@ -1,0 +1,270 @@
+\documentclass[twoside,a4paper,12pt]{article}
+
+
+\usepackage{graphicx} % Required for inserting images
+\usepackage[a4paper,left = 3.18cm, right = 3.18cm, top = 2.54cm,bottom=2.54cm]{geometry}
+\usepackage{natbib}
+\usepackage{lineno,hyperref}
+\usepackage[figuresright]{rotating}
+\usepackage{subfigure}
+\usepackage{fancybox}
+\usepackage[justification=centering]{caption}
+\usepackage{multirow}
+\usepackage{amsthm,amsmath,amssymb}
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+\usepackage{soul}
+\usepackage[dvipsnames, svgnames, x11names]{xcolor}
+\usepackage{enumerate}
+ 
+\usepackage{graphicx} 
+\usepackage{epstopdf}
+\usepackage{indentfirst} 
+\setlength{\parindent}{2em}
+\usepackage{CJKutf8}
+
+
+\hypersetup{
+colorlinks=true,
+linkcolor=black
+}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+
+ 
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary {automata}
+\usetikzlibrary{arrows,shapes,chains}
+\usetikzlibrary{positioning}
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary {decorations.pathreplacing}
+\usetikzlibrary{graphs.standard}
+\usetikzlibrary {datavisualization}
+
+\usetikzlibrary{backgrounds}
+\usepackage{graphicx}
+
+\newtheorem{myDef}{定义}
+\newtheorem{myPro}{命题}
+\newtheorem{myExam}{例}
+\newtheorem{myTheo}{定理}
+\newtheorem{myLemm}{引理}
+\newtheorem{myCor}{推论}
+\renewcommand{\figurename}{\textbf{图}}
+\renewcommand{\tablename}{\textbf{表}}
+\renewcommand{\proofname}{\textbf{证明}}
+
+% \usepackage{titlesec}
+% \titleformat{\section}[block]{\Large}{\textbf{第\,\thesection\,章}}{1pt}{}[\centering]
+
+% \titleformat{\section}
+% [hang]
+% {\sffamily \vbox{\titlerule}}
+% {\centering\zihao{-3}\bfseries \S\ \thesection\enspace}
+% {0pt}
+% {\zihao{-3}\bfseries}
+% [\vbox{\titlerule \hspace{1pt} \titlerule}]
+% \titlespacing{\section}{0pt}{-2pt}{2pt}
+
+
+\newcounter{contcnt}
+\setcounter{contcnt}{0}
+ 
+ 
+
+
+\title{XXXXXXXXX}
+
+\author{XXXXXXXX}
+\date{2023.11.17}
+
+
+\newcommand{\clearpagebyprint}{\if@twoside\cleardoublepage\else\clearpage\fi}
+\newcommand{\fillinblank}[2]{\CJKunderline{\makebox[#1]{#2}}}
+\newcommand{\makecover}{
+    \begin{titlepage}
+    {\fancypage{\fbox}{}
+    \rightline{ \hspace{8cm} 分    类    号：TPxxx \hspace{8cm} 单位代码：xxx }
+     \rightline{ \hspace{2cm} 研究生学号：xxxx  \hspace{7.4cm} 密  级：公   开 }
+        {\centering\includegraphics[width = 0.25\textwidth]{jlulogo.pdf}\\[0.77cm] }
+         \center 
+        \bfseries \begin{Huge} 吉 林 大 学\end{Huge}   \\[1cm]
+        \bfseries \begin{Huge} 博士学位论文\end{Huge}   \\[1.58cm]
+          \bfseries \begin{Large}  Title XXXXXXXXXXXXXXX\end{Large}   \\[12pt]
+            \bfseries \begin{Large} Title XXXXXXXXXXXXXXX \end{Large}   \\[2.58cm]
+              \bfseries          \makebox[15cm]{作者姓名: XXXX}  \\[5pt]
+       \bfseries           \makebox[15cm]{专业:XXXXX}  \\[5pt]
+        \bfseries           \makebox[15cm]{ 研究方向:XXXXX}  \\[5pt]
+        \bfseries            \makebox[15cm]{ 指导教师:XXX 教授 }  \\[5pt]
+            \bfseries           \makebox[15cm]{ 培养单位:计算机科学与技术学院 }  \\[5pt]
+       
+        \newpage}
+        \newcommand{\HRule}{\rule{\linewidth}{1mm}}
+        \quad \\[0.42cm]
+        {\centering\includegraphics[width = 0.25\textwidth]{jlulogo.pdf}\\[0.77cm] }
+        \center 
+        
+          \bfseries \begin{huge} Title XXXXXXXXXXXXXXX\end{huge}   \\[12pt]
+            \bfseries \begin{huge} Title XXXXXXXXXXXXXXX \end{huge}   \\[2.58cm]
+      
+         
+        \begin{Large}
+             \makebox[15cm]{  作者姓名: XXXXX}  \\[5pt]
+                \makebox[15cm]{  专业名称:XXXXX}  \\[5pt]
+               \makebox[15cm]{ 研究方向:XXXX}  \\[5pt]
+                 \makebox[15cm]{ 指导教师:XXX 教授 }  \\[5pt]
+                   \makebox[15cm]{ 学位类别:工学博士 }  \\[5pt]
+                    \makebox[15cm]{ 培养单位:计算机科学与技术学院 }  \\[5pt]
+                  \makebox[15cm]{ 论文答辩日期： }  \\[5pt]
+                  \makebox[15cm]{ 授予学位日期： }  \\[10pt]
+             \end{Large}
+               \makebox[15cm]{ 答辩委员会成员： }  \\[5pt]
+                \makebox[15cm]{ 姓名    职称   工作单位 }  \\[5pt]
+      
+        \vfill 
+        \newpage
+    \end{titlepage}
+}
+
+
+\newcommand{\commitment}[0]{
+    \setlength{\baselineskip}{30pt}
+    
+    {\centering\section*{ 吉林大学博士学位论文原创性声明}}
+    % \addcontentsline{toc}{chapter}{\commitment@title}
+    \vspace{1.5cm}
+    { 本人郑重声明：所呈交学位论文，是本人在指导教师的指导下，独立进行研究工作所取得的成果。除文中已经注明引用的内容外，本论文不包含任何其他个人或集体已经发表或撰写过的作品成果。对本文的研究做出重要贡献的个人和集体，均已在文中以明确方式标明。本人完全意识到本声明的法律结果由本人承担。} \\[2cm]
+    \leftline{ \hspace{8cm} 学位论文作者签名: } \\
+    \leftline{ \hspace{8cm} 日期: }
+    \vfill
+    \newpage
+    {\centering\section*{ 关于学位论文使用授权的声明}}
+     \vspace{1.0cm}
+    { 本人完全了解吉林大学有关保留、使用学位论文的规定，同意吉林大学保留或向国家有关部门或机构送交论文的复印件和电子版，允许论文被查阅和借阅；本人授权吉林大学可以将本学位论文的全部或部分内容编入有关数据库进行检索，可以采用影印、缩印或其他复制手段保存论文和汇编本学位论文。} \\ \vspace{0.9cm}
+    {（保密论文在解密后应遵守此规定）}\\\vspace{0.5cm}
+    {论文级别：□硕士 ■博士}\\
+    {学科专业：XXXXX}\\
+    {论文题目：XXXXXXXX}\\\vspace{1.5cm}
+    {作者签名：}\\\vspace{0.8cm}
+    {作者联系地址（邮编）：吉林省长春市前进大街2699号（130012） }\\
+    {作者联系电话： +86 XXXXXX}\\
+    [2cm]
+    
+    
+      \newpage
+}
+
+\begin{document}
+\begin{CJK}{UTF8}{gbsn}
+
+
+
+% 封面
+\makecover
+\thispagestyle{empty}
+\commitment
+\thispagestyle{empty}
+
+
+{\centering\section*{ 摘要}}
+\thispagestyle{empty}
+
+
+ 
+
+
+\noindent\textbf{关键词：}
+
+
+XXXX，XXXX， XXX， XXXX， XXX
+
+\newpage
+\thispagestyle{empty}
+
+
+\begin{abstract}
+
+
+\noindent\textbf{keywords：}
+
+XXXX, XXXX, XXX, XXXX, XXX
+\end{abstract}
+
+
+\maketitle
+\thispagestyle{empty}
+\tableofcontents
+\thispagestyle{empty}
+
+\newpage
+\setcounter{page}{1}
+
+
+
+
+\input{section1}
+
+
+\input{section2}
+
+\input{section3}
+
+\input{section4}
+
+\input{section5}
+
+
+
+
+
+
+
+
+
+
+\newpage
+{\centering\section{总结与展望}}
+
+
+\subsection{本文总结}
+
+
+
+\subsection{未来工作展望}
+
+
+
+
+\newpage
+\renewcommand\refname{\center{\textbf{参考文献}}}
+\bibliographystyle{plain}
+\bibliography{references}
+
+
+
+
+
+
+\newpage
+{\centering\section*{作者简介及在学期间科研成果}}
+
+
+\begin{itemize}
+  \item  one 
+    \item  two
+    \item  three
+\end{itemize}
+
+\newpage
+{\centering\section*{致谢}}
+
+
+\end{CJK}
+\end{document}
