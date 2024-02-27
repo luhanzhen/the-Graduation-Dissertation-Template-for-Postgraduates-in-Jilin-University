@@ -1,4 +1,5 @@
 \documentclass[twoside,a4paper,12pt]{article}
+\usepackage[numbers]{natbib}
 
 
 \usepackage{graphicx} % Required for inserting images
@@ -47,6 +48,11 @@ linkcolor=black
 \usetikzlibrary {decorations.pathreplacing}
 \usetikzlibrary{graphs.standard}
 \usetikzlibrary {datavisualization}
+
+\newcommand{\upcite}[1]{\textsuperscript{\cite{#1}}} %引用参考文献时，\upcite{1}，能标在右上角，相当于是重定义一个语句。
+%如果不使用上面这一行，可以用\textsuperscript{\cite{xxx}}生成上标，也可以达到引用的效果。
+\hypersetup{colorlinks = true,  %将链接文字带颜色
+    		citecolor = black} %文献引用颜色设置为蓝色
 
 \usetikzlibrary{backgrounds}
 \usepackage{graphicx}
@@ -244,7 +250,8 @@ XXXX, XXXX, XXX, XXXX, XXX
 
 \newpage
 \renewcommand\refname{\center{\textbf{参考文献}}}
-\bibliographystyle{plain}
+
+\bibliographystyle{bibstyle}
 \bibliography{references}
 
 
